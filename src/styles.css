@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lato&family=Lobster+Two:ital@1&family=Mukta:wght@800&family=Noto+Sans+JP:wght@900&family=Noto+Sans+SC:wght@900&family=Nunito:wght@400;600&family=Reem+Kufi+Ink&family=Rubik:wght@600;700&family=Signika+Negative:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lato&family=Lobster+Two:ital@1&family=Mukta:wght@800&family=Noto+Sans+JP:wght@900&family=Noto+Sans+SC:wght@900&family=Nunito:wght@700&family=Reem+Kufi+Ink&family=Rubik:wght@600;700&family=Signika+Negative:wght@500&display=swap');
+:root{
+    --size: 1vw;
+    --nav-color: #FF9F00;
+    --background-color: #181818;
+    --input-color: #242424;
+    --inactive-color: #474747;
+    --text-color: #8d8d8d;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background: #131313;
+    overflow: hidden;
+}
+::-webkit-scrollbar{
+    width: 1vw;
+}
+::-webkit-scrollbar-track{
+    background: var(--input-color);
+}
+::-webkit-scrollbar-thumb{
+    border: .5vw solid var(--input-color);
+    border-radius: .5vw;
+    background: #8d8d8d;
+}
+::-webkit-scrollbar-thumb:hover{
+    border: .3vw solid var(--input-color);
+}
+.flex-center{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.text-degrade{
+    background: linear-gradient(45deg, rgba(255,164,0,1) 0%, rgba(255,57,0,1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+@media screen and (max-width: 700px) {
+    :root{
+        --size: 1vh;
+    }
+}

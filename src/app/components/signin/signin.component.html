@@ -1,0 +1,23 @@
+<div class="container flex-center">
+    <div class="img">
+        <img src="assets/user-img.png" alt="user-img">
+    </div>
+
+    <form>
+
+        <div class="form-group-input flex-center">
+            <p class="text-degrade">Email</p>
+            <input type="text" name="email" [(ngModel)]="body.email" placeholder="email">
+        </div>
+
+        <div class="form-group-input flex-center">
+            <p class="text-degrade">Password</p>
+            <input type="password" name="password" [(ngModel)]="body.password" placeholder="password">
+        </div>
+
+        <div class="form-group-button flex-center">
+            <button (click)="Signin()">signin now</button>
+        </div>
+
+    </form>
+</div>

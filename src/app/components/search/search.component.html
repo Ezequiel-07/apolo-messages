@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="user flex-center" (click)="selectChat(this.user.socketId, this.user.user)" *ngFor="let user of users">
+        <div class="profile flex-center">
+            <div class="img">
+                <img src="{{user.profile_img}}" alt="img">
+            </div>
+        </div>
+        <div class="name flex-center">
+            <h3>{{user.first_name}}</h3>
+            <h5>{{user.last_name}}</h5>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="open-users">
+        <label class="flex-center" for="active"> >> </label>
+    </div>
+    <input type="checkbox" id="active" #userOpen required>
+    <div class="users">
+        <app-search (id_user)="selectUser($event)"></app-search>
+    </div>
+    <div class="chat">
+        <div class="view-messages">
+            <div class="msg" *ngFor="let messages of msg">
+                <div class="head-msg">
+                    <h3 class="text-degrade">{{messages.user}}</h3>
+                </div>
+                <div class="body-msg">
+                    <p>{{messages.msg}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="send-messages">
+            <form class="flex-center">
+                <div class="form-group-input">
+                    <input type="text" name="msg" [(ngModel)]="body.msg" placeholder="message" autofocus>
+                </div>
+                <div class="form-group-button">
+                    <button (click)="sendMessage()"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

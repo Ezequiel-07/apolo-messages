@@ -1,0 +1,119 @@
+nav{
+    width: 100vw;
+    height: 7vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.3vw 0 2.3vw;
+    background: linear-gradient(105deg, rgba(255,164,0,1) 0%, rgba(255,164,0,1) 25%, rgba(255,70,0,1) 100%);
+    z-index: 1500;
+}
+.icon{
+    width: 10%;
+    height: 100%;
+}
+.icon a{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.icon a .pc{
+    width: 100%;
+}
+.icon a .phone{
+    display: none;
+    height: 100%;
+}
+.menu{
+    width: 10%;
+    height: 100%;
+    font-size: calc(var(--size) * 1.8);
+    color: #ffffff;
+}
+.menu label{
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: calc(var(--size) * .2) calc(var(--size) * .6);
+    transition: all ease 2s;
+}
+.menu label:hover{
+    box-shadow: 4px 4px 5px 0 #ff3c00, -1px -1px 10px 0 #d42000;
+}
+input#open{
+    display: none;
+}
+.options{
+    width: 20%;
+    height: max-content;
+    position: absolute;
+    left: 75%;
+    top: -100%;
+    background: #ff6800;
+    transition: top ease 1s;
+    z-index: 1000;
+}
+input#open:valid + .options{
+    top: 7vh;
+}
+.options div{
+    width: 100%;
+    height: calc(var(--size) * 3);
+}
+.options div a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: calc(var(--size) * 1.2);
+    transition: background ease 1s;
+}
+.options div a:hover{
+    background: #ff4800;
+}
+.options .user{
+    width: 100%;
+    height: max-content;
+    flex-wrap: wrap;
+    padding: calc(var(--size) * 1.5) 0;
+}
+.options .user .img{
+    width: calc(var(--size) * 12);
+    height: calc(var(--size) * 12);
+    overflow: hidden;
+    border-radius: 100rem;
+    margin: var(--size);
+}
+.img img{
+    width: 100%;
+}
+.options .user .name{
+    width: 90%;
+    height: max-content;
+    color: #ffffff;
+}
+
+@media screen and (max-width:700px) {
+    .icon{
+        padding: 1vh;
+        width: 20%;
+    }
+    .icon a .pc{
+        display: none;
+    }
+    .icon a .phone{
+        display: flex;
+    }
+    .options{
+        width: 100%;
+        left: 0%;
+    }
+    .options div{
+        height: calc(var(--size) * 7.5);
+    }
+    .options div a{
+        font-size: calc(var(--size) * 1.6);
+    }
+}

@@ -1,0 +1,28 @@
+<nav class="nav">
+    <div class="icon">
+        <a class="flex-center" routerLink="/chat">
+            <img class="pc" src="assets/Apolo-Logo.png" alt="Apolo-Logo">
+            <img class="phone" src="assets/Apolo-mobile-Logo.png" alt="Apolo-Logo">
+        </a>
+    </div>
+
+    <div class="menu flex-center">
+        <label for="open">☰</label>
+    </div>
+</nav>
+
+<input type="checkbox" id="open" #open required>
+<div class="options">
+    <!-- if user is a object empty -->
+    <div class="flex-center" *ngIf="user.status == false"><a class="flex-center" routerLink="/signup" (click)="open.click()">signup</a></div>
+    <div class="flex-center" *ngIf="user.status == false"><a class="flex-center" routerLink="/signin" (click)="open.click()">signin</a></div>
+
+    <!-- if user is diferent of object empy -->
+    <div class="user flex-center" *ngIf="user.status != false">
+        <div class="img"><img src="{{this.user.profile_img}}" alt="user"></div>
+        <div class="name">
+            <h2>{{this.user.first_name}}</h2>
+            <h3>{{this.user.last_name}}</h3>
+        </div>
+    </div>
+</div>

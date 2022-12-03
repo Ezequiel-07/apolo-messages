@@ -1,0 +1,40 @@
+<div class="container">
+    <form >
+
+        <div class="form-group-file flex-center">
+            <input type="file" name="file" #file (change)="getFile($event)">
+            <div class="img"><img [src]="filePreview || 'assets/user-img.png'" alt="img preview" (click)="file.click()"></div>
+        </div>
+
+        <div class="form-group-textarea">
+            <p class="flex-center text-degrade">Description</p>
+            <textarea name="description" [(ngModel)]="body.description" cols="30" rows="10" placeholder="description"></textarea>
+        </div>
+
+        <div class="form-group-input flex-center">
+            <p class="text-degrade">First Name</p>
+            <input type="text" name="first_name" [(ngModel)]="body.first_name" placeholder="first name" required="true">
+        </div>
+
+        <div class="form-group-input flex-center">
+            <p class="text-degrade">Last Name</p>
+            <input type="text" name="last_name" [(ngModel)]="body.last_name" placeholder="last name" required="true">
+        </div>
+
+        <div class="form-group-input flex-center">
+            <p class="text-degrade">Email</p>
+            <input type="email" name="email" [(ngModel)]="body.email" placeholder="email" required="true">
+        </div>
+
+        <div class="form-group-input flex-center">
+            <p class="text-degrade">Password</p>
+            <input type="password" name="password" [(ngModel)]="body.password" placeholder="password" required="true">
+        </div>
+
+        <div class="form-group-button flex-center">
+            <button type="submit" (click)="Signup()">Create</button>
+            <div class="button-inactive flex-center" *ngIf=""><p class="text-degrade">Create</p></div>
+        </div>
+
+    </form>
+</div>

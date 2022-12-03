@@ -1,0 +1,11 @@
+<div class="background">
+    <div class="container" *ngIf="data">
+        <div class="head">
+            <h2 class="text-degrade">{{this.data.type}}</h2>
+            <p class="close" (click)="close()">x</p>
+        </div>
+        <div class="body">
+            <h4>{{this.data.message}}</h4>
+        </div>
+    </div>
+</div>

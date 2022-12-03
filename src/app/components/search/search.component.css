@@ -1,0 +1,46 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.user{
+    width: 100%;
+    height: calc(var(--size) * 5);
+    border-bottom: calc(var(--size) * .1) solid var(--text-color);
+    transition: background 1.5s ease;
+    cursor: pointer;
+}
+.user:hover{
+    background: var(--input-color);
+}
+.profile{
+    width: 30%;
+    height: 100%;
+}
+.user .profile .img{
+    width: calc(var(--size) * 3.8);
+    height: calc(var(--size) * 3.8);
+    border-radius: 100rem;
+    overflow: hidden;
+}
+.img img{
+    width: auto;
+    height: 100%;
+}
+.user .name{
+    width: 50%;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.name h3{
+    font-size: calc(var(--size) * 1.4);
+    color: #ffffff;
+}
+.name h5{
+    font-size: calc(var(--size) * .9);
+    color: #ffffff;
+}
