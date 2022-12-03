@@ -43,6 +43,12 @@ body{
     background-clip: text;
     color: transparent;
 }
+.img{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width: 700px) {
     :root{
